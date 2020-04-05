@@ -1,0 +1,229 @@
+/* document default */
+
+* {margin: 0px}
+
+#wrapper {
+	margin-left: auto;
+	margin-right: auto;
+	overflow-x: hidden;
+}
+
+/* top-level elements */
+
+body {
+	background-color: #daecf5;
+	background-image: url(images/waveico.jpg);
+	background-image: repeat;
+	font-family: "Noticia Text", serif
+}
+
+img {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+header {
+	text-align: center;
+	background-color: #5dc6c7;
+	color: black;
+	padding: 1.5em;
+	margin: 0px
+}
+
+header h1 {
+	font-weight: 900;
+}
+
+header h1 a {	
+	text-decoration: none;
+	color: black
+}
+
+header h2 {
+	font-weight: 400;
+}
+
+footer {
+	background-color: #5dc6c7;
+	float: left;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	margin-top: 1em;
+	font-size: 1em;
+}
+
+footer p {
+	margin: 1em;
+	font-weight: bold;
+}
+
+/* custom dividers */
+
+.hr1 {
+	border: 7px solid #4a4a4a
+}
+
+.hr2 {
+	border: 1px solid black
+}
+
+/* panorama details */
+
+.pano {
+	position: relative;
+	text-align: center;
+	color: black;
+}
+
+.pano-text {
+	position: absolute;
+	top: 8px;
+	right: 16px;
+}
+
+.pano-text .dropdown img {
+	width: 100px;
+	height: 90px
+}
+	
+
+.pano-text .dropdown {
+	position: relative;
+	display: inline-block;
+	background-color: white;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+	padding-top: .5em;
+	padding-bottom: .5em;
+	font-family: "Nunito", sans-serif;
+	font-size: 1em;
+	border: 2px solid #4a4a4a;
+	border-radius: 10px;
+	cursor: pointer;
+	background-image: url("images/waves.jpg")
+}
+
+.pano-text .dropdown-content {
+	display: none;
+	position: absolute;
+	margin-top: .5em;
+	background-color: white;
+	border: 2px solid #4a4a4a;
+	border-radius: 10px;
+	text-align: left;
+	padding: 1em;
+	right: 0em;
+	min-width: 8em;
+	background-image: url(images/waveico.jpg);
+}
+
+.dropdown-content li {
+	margin: .5em;
+	margin-left: -1em;
+}
+
+.dropdown-content p {
+	margin: .5em;
+}
+
+.pano-text .dropdown-content a {
+	display: block;
+}
+
+.pano-text .dropdown:hover .dropdown-content {
+	display: block;
+}
+
+/* navbar details */
+
+
+.navbar {
+	width: 100%;
+	background-color: #98cae3;
+	display: block;
+	text-align: center;
+	border-bottom: 1px solid #4a4a4a;
+}
+
+.navbar a {
+	display: inline-block;
+	text-decoration: none;
+	font-size: 1.25 em;
+	color: black;
+	text-align: center;
+	padding: 1.5em;
+	font-weight: bold;
+}
+
+.navbar a:hover {
+	background-color: #ad1328;
+}
+
+/* main */
+
+.respimg {
+	max-width: 100%;
+	height: auto;
+}
+
+.columncontainer {
+	width: 100%;
+	text-align: center
+}
+
+.column {
+	display: inline-block;
+	width: 45%;
+	padding: 1em;
+	margin-top: 2em;
+	font-family: "Nunito Sans", sans-serif;
+	border: 1px solid #4a4a4a
+}
+
+.mainpage {
+	color: #23516e;
+	font-weight: bold;
+	display: block;
+	padding: 2em;
+	font-family: "Nunito Sans", sans-serif;
+}
+
+.mainpage .container {
+	background-color: rgba(0,0,0,0);
+	border: none;
+	float: left;
+	clear: both;
+}
+
+.mainpage .sub {
+	color: #23516e;
+	font-size: 2em;
+	margin-bottom: .5em;
+	margin-top: 1em;
+	font-weight: bold
+}
+
+.mainpage .text {
+	font-size: 1.25em;
+}
+
+.mainpage .img1 {
+	float: right;
+	margin-left:1em; 
+	margin-bottom: 1em;
+	border-radius:10px;
+	height: auto;
+	max-width: 75vw;
+}
+
+.mainpage .img2 {
+	float: left;
+	margin-right:1.5em;
+	margin-bottom:1em;
+	margin-top: 1em;
+	border-radius: 10px;
+	height: auto;
+	max-width: 75vw;
+}

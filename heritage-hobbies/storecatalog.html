@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>Heritage Hobbies</title>
+  <meta charset="utf-8">
+  <meta name="author" content="Daryl Wong">
+  <meta name="description" content="Online Store">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css.css" media="all" type="text/css">
+  <link rel="icon" href="images/sun.png" sizes="16x16" type="image/png">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noticia+Text&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Baskervville&display=swap" rel="stylesheet">
+  
+  <style>
+  
+    #cat1, #cat2, #cat3 {
+	  display:none
+	}
+    
+	fieldset {
+	  margin-top: 2em;
+	  background-color: #999;
+	}
+	
+	legend {
+	  border: 2px solid #4a4a4a;
+	  background-color: white;
+	  font-weight: bold;
+	}
+	
+	.displaybox {
+	  border: 2px solid #4a4a4a;
+	  border-radius: 25px;
+	  margin-top: 2em;
+	  background-image: linear-gradient(-45deg, #42cde3, white);
+	  min-height: 20em;
+	}
+	
+	.displaybox img {
+	  margin: 2em;
+	  border-radius: 25px;
+	  border: 1px solid #4a4a4a;
+	  float:left;
+	}
+	
+	.displaybox p {
+	  margin: 2em
+	}
+	
+	.displaybox .sub {
+	  margin-bottom: 0em;
+	}
+	
+
+  </style>
+  
+  <script>
+  
+  function categoryfunction() {
+    var a = document.getElementById("cat1");
+	var b = document.getElementById("cat2");
+	var c = document.getElementById("cat3");
+	var d = document.getElementById("cat4");
+	var y = document.getElementById("category");
+	var z = y.options[y.selectedIndex].text;
+	if (z === "Food Items") {
+	  a.style.display = "block";
+	  b.style.display = "none";
+	  c.style.display = "none";
+	} else if (z === "Clothing") {
+	  a.style.display = "none";	
+	  b.style.display = "block";
+	  c.style.display = "none";
+	} else if (z === "Souvenirs") {
+	  a.style.display = "none";
+	  b.style.display = "none";
+	  c.style.display = "block";
+	} else if (z === "All Items") {
+	  a.style.display = "block";
+	  b.style.display = "block";
+	  c.style.display = "block";
+	} else {
+	  a.style.display = "none";
+	  b.style.display = "none";
+	  c.style.display = "none";
+	}
+  }
+  
+  </script>
+
+</head>
+
+<body>
+<div id="wrapper">
+<div id="top">
+</div>
+
+  <div class="pano">
+    <img src="images/steveston_pano.jpg" alt="steveston panorama">
+	<div class="pano-text">
+	  <div class="dropdown">
+	    <p><a href="sitemap.html"><img src="images/shipwheel.png" alt="shipwheel navicon"></a>Site Navigation</p>
+		<p>(click for sitemap)</p>
+		  <div class="dropdown-content">
+		  	<p class="text"><a href="main.html">Main Page</a></p>
+			<p class="text"><a href="store.html">Online Store</a></p>
+			  <ul class="text">
+				<li><a href="storeform.html">Purchase Form</a></li>
+				<li><a href="storecatalog.html">Online Catalog</a></li>
+			  </ul>
+			<p class="text"><a href="business.html">Local Businesses</a></p>
+			<p class="text"><a href="events.html">Local Events</a></p>
+			<p class="text"><a href="sightseeing.html">Sightseeing</a></p>
+			<p class="text"><a href="survey.html">Survey</a></p>
+			<p class="text"><a href="contact.html">About & Contact</a></p>
+			  <ul class="text">
+				<li><a href="sources.html">Sources</a></li>
+			  </ul>
+			<p class="text"><a href="privacy.html">Privacy Policy</a></p>
+			<p class="text"><a href="sitemap.html">Sitemap</a></p>
+		  </div>
+	  </div>
+	</div>
+  </div>
+
+  <hr class="hr1">
+  
+  <header>
+    <div>
+      <h1><a href="main.html">Heritage Hobbies & Fine Goods</a></h1>
+	  <h2>Steveston, British Columbia</h2>
+	</div>
+  </header>
+  
+  <hr class="hr1">
+  
+  <nav>
+    <div class="navbar">
+	  
+	  <a href="store.html"><img src="images/salmon.png" alt="salmon navicon">Our Store</a>
+	  
+	  <a href="business.html"><img src="images/shop.png" alt="shop navicon">Local Businesses</a>
+	  
+	  <a href="events.html"><img src="images/sun.png" alt="sun navicon">Local Events</a>
+	  <a href="sightseeing.html"><img src="images/binoculars.png" alt="binoculars navicon">Sightseeing</a>
+	  <a href="survey.html"><img src="images/survey.png" alt="survey navicon">Survey</a>
+	  <a href="contact.html"><img src="images/contact.png" alt="contact navicon">About & Contact</a>
+	</div>
+  </nav>
+
+  <main>
+  
+  <div class="mainpage">
+    <p class="sub" style="margin-top:0em;">Heritage Hobbies Catalog</p>
+	<p class="text">Here you may find listings for our inventory for the month November 2019.</p>
+    
+	<fieldset>
+	<legend>Select a category...</legend>
+	
+	<select size="1" name="categorytype" id="category" onchange="categoryfunction()">
+	
+	<option value="none">Select an item...</option>
+	<option value="food">Food Items</option>
+	<option value="clothing">Clothing</option>
+	<option value="souvenirs">Souvenirs</option>
+	<option value="all">All Items</option>
+	
+	</select>
+	
+	<div id="cat1">
+	<div class="displaybox">
+	  <img src="images/salmon.jpg" alt="salmon listing" class="respimg">
+	  <p class="sub">Salmon</p>
+	  <p class="text">$14.99 / 500g</p>
+	  <p class="text">Our salmon is caught fresh daily. It is sashimi-grade and may be eaten as such,
+	  or it can also be cooked as a nice salmon steak if you so prefer.</p>
+	</div>
+	
+	<div class="displaybox">
+	  <img src="images/poutine.jpg" alt="poutine listing" class="respimg">
+	  <p class="sub">Poutine</p>
+	  <p class="text">$6.99 / order</p>
+	  <p class="text">Classic Canadian poutine. Made with fries, gravy, and cheese curds.</p>
+	</div>
+	
+	<div class="displaybox">
+	  <img src="images/maplesyrup.jpg" alt="maple syrup listing" class="respimg">
+	  <p class="sub">Maple Syrup</p>
+	  <p class="text">$12.49 / 100mL</p>
+	  <p class="text">A world-favourite syrup. Goes well with pancakes!</p>
+	</div>
+	</div>
+	
+	<div id="cat2">
+	<div class="displaybox">
+	  <img src="images/sombrero.jpg" alt="sombrero listing" class="respimg">
+	  <p class="sub">Party Sombrero</p>
+	  <p class="text">$19.99 / ea</p>
+	  <p class="text">A really cool sombrero.</p>
+	</div>
+	</div>
+	
+	<div id="cat3">
+	<div class="displaybox">
+	  <img src="images/chinaware.jpg" alt="chinaware listiing" class="respimg">
+	  <p class="sub">Fine Chinaware</p>
+	  <p class="text">$299.99 / set</p>
+	  <p class="text">Elegant set piece for any environment or occasion.</p>
+	</div>
+	</div>
+	
+	<p><a href="#top">Back to top</a></p>
+	
+	</fieldset>
+	
+  </div>
+  
+  </main>
+  
+
+  <footer>
+    <hr class="hr1">
+	<p style="font-size: 1.25em">Opening Hours<p>
+	<p>Mon-Fri: 9AM-5PM &#124; Sat: 8AM-6PM &#124; Sun: Closed</p>
+    <p>&copy; 2019 Daryl Wong &#124; <a href="privacy.html">Privacy Policy</a></p>
+	<hr class="hr1">
+  </footer>
+
+</div>
+</body>
+
+</html>

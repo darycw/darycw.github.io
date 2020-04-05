@@ -1,0 +1,6 @@
+- 12 pages interlinked
+- pages using 2 column layout: store.html, business.html
+- sitemap: sitemap.html
+- working web form: storeform.html, survey.html
+- page elements using javascript: credit card information input in storeform.html,
+catalog display in storecatalog.html, submit popup window in survey.html

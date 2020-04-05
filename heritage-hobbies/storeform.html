@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>Heritage Hobbies</title>
+  <meta charset="utf-8">
+  <meta name="author" content="Daryl Wong">
+  <meta name="description" content="Online Store">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css.css" media="all" type="text/css">
+  <link rel="icon" href="images/sun.png" sizes="16x16" type="image/png">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noticia+Text&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Baskervville&display=swap" rel="stylesheet">
+  
+  <style>
+  
+    #onlineform {
+	  background-color: #d6d6d6;
+	  border: 2px solid black;
+	  padding: 2em;
+	  margin-top: 2em;
+	  min-width: 16em;
+	  max-width: 25%;
+	}
+	
+	fieldset {
+	  margin-bottom: 1em;
+	  padding: 1em;
+	  background-color: white;
+	}
+	
+	legend {
+	  font-weight: bold;
+	  background-color: white;
+	  border: 1px solid #4a4a4a;
+    }
+	
+	.info1 > label {
+	  display: block;
+	  float: left;
+	  clear: left;
+	  width: 3em;
+	  margin-right: .25em
+	  }
+	  
+	.info1 > input {
+	  display: block;
+	  margin: .5em;
+	  margin-left: 5em
+	}
+	
+	.center {
+	  text-align: center
+	}
+
+  </style>
+  
+  <script>
+  
+  function ccfunction() {
+    var x = document.getElementById("ccinfo");
+	var y = document.getElementById("payment");
+	var z = y.options[y.selectedIndex].text;
+	if (z === "Credit Card") {
+	  x.style.display = "block";
+	} else {
+	  x.style.display = "none";
+	}
+  }
+  
+  </script>
+
+</head>
+
+<body>
+<div id="wrapper">
+
+  <div class="pano">
+    <img src="images/steveston_pano.jpg" alt="steveston panorama">
+	<div class="pano-text">
+	  <div class="dropdown">
+	    <p><a href="sitemap.html"><img src="images/shipwheel.png" alt="shipwheel navicon"></a>Site Navigation</p>
+		<p>(click for sitemap)</p>
+		  <div class="dropdown-content">
+		  	<p class="text"><a href="main.html">Main Page</a></p>
+			<p class="text"><a href="store.html">Online Store</a></p>
+			  <ul class="text">
+				<li><a href="storeform.html">Purchase Form</a></li>
+				<li><a href="storecatalog.html">Online Catalog</a></li>
+			  </ul>
+			<p class="text"><a href="business.html">Local Businesses</a></p>
+			<p class="text"><a href="events.html">Local Events</a></p>
+			<p class="text"><a href="sightseeing.html">Sightseeing</a></p>
+			<p class="text"><a href="survey.html">Survey</a></p>
+			<p class="text"><a href="contact.html">About & Contact</a></p>
+			  <ul class="text">
+				<li><a href="sources.html">Sources</a></li>
+			  </ul>
+			<p class="text"><a href="privacy.html">Privacy Policy</a></p>
+			<p class="text"><a href="sitemap.html">Sitemap</a></p>
+		  </div>
+	  </div>
+	</div>
+  </div>
+
+  <hr class="hr1">
+  
+  <header>
+    <div>
+      <h1><a href="main.html">Heritage Hobbies & Fine Goods</a></h1>
+	  <h2>Steveston, British Columbia</h2>
+	</div>
+  </header>
+  
+  <hr class="hr1">
+  
+  <nav>
+    <div class="navbar">
+	  
+	  <a href="store.html"><img src="images/salmon.png" alt="salmon navicon">Our Store</a>
+	  
+	  <a href="business.html"><img src="images/shop.png" alt="shop navicon">Local Businesses</a>
+	  
+	  <a href="events.html"><img src="images/sun.png" alt="sun navicon">Local Events</a>
+	  <a href="sightseeing.html"><img src="images/binoculars.png" alt="binoculars navicon">Sightseeing</a>
+	  <a href="survey.html"><img src="images/survey.png" alt="survey navicon">Survey</a>
+	  <a href="contact.html"><img src="images/contact.png" alt="contact navicon">About & Contact</a>
+	</div>
+  </nav>
+  
+  <main>
+  <div class="mainpage">
+  <div class="container">
+
+	<p class="sub" style="margin-top: 0em">Online Purchase Information Form</p>
+	<p class="text">If you would like to order our items by delivery, please fill out the following form
+	and we will contact you as soon as possible. (Note: Additional shipping costs may be charged.
+	Some perishables may not be able to be shipped.)</p>
+
+    <div id="onlineform">
+	<form name="purchaseform" id="purchaseform" method="post" action="https://webdevbasics.net/scripts/demo.php" 
+	autocomplete="off">
+	
+  <fieldset>
+
+    <legend>Personal Information (required):</legend>
+    
+	<div class="info1">
+	
+	<label for="name">Name:</label>
+	<input type="text" name="fullname" id="name" required="required">
+	
+    <label for="email">Email:</label>
+	<input type="email" name="emailaddress" id="email" required="required">
+	
+	<label for="phone">Phone:</label>
+	<input type="tel" name="phonenumber" id="phone" required="required">
+	
+	<label for="address">Address:</label>
+	<input type="text" name="homeaddress" id="address" required="required">
+	
+	</div>
+	
+  </fieldset>
+
+
+  <fieldset>
+
+    <legend>Payment Type (select one):</legend>
+    
+	<div>
+	
+	<select size="1" name="paymenttype" id="payment" onchange="ccfunction()">
+	
+	<option value="credit card">Credit Card</option>
+	<option value="cheque">Mail Cheque</option>
+	<option value="cash">Cash (Pick-up)</option>
+	
+	</select>
+	
+	</div>
+	
+	<div id="ccinfo" style="margin-top:1em">
+	<label for="cc">Credit Card Information (required):</label>
+	<input type="text" name="ccinfo" id="cc">
+	</div>
+	
+  </fieldset>
+
+  <fieldset>
+
+    <legend>Items to Order (required):</legend>
+    
+	<div>
+	
+	<textarea name="usercomments" id="comments" cols="25" rows="10"></textarea>
+	
+	</div>
+	
+  </fieldset>
+  
+  <div class="center">
+  
+  <button type="submit" value="Submit" id="submit">Submit Information</button>
+  <button type="reset" value="Reset" id="reset">Reset Form</button>
+
+  </div>
+  
+  </form>
+	
+	
+  </div>
+
+  </div>
+  </div>
+  </main>
+
+  <footer>
+    <hr class="hr1">
+	<p style="font-size: 1.25em">Opening Hours<p>
+	<p>Mon-Fri: 9AM-5PM &#124; Sat: 8AM-6PM &#124; Sun: Closed</p>
+    <p>&copy; 2019 Daryl Wong &#124; <a href="privacy.html">Privacy Policy</a></p>
+	<hr class="hr1">
+  </footer>
+
+</div>
+</body>
+
+</html>

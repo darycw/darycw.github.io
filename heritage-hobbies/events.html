@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>Heritage Hobbies</title>
+  <meta charset="utf-8">
+  <meta name="author" content="Daryl Wong">
+  <meta name="description" content="Online Store">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css.css" media="all" type="text/css">
+  <link rel="icon" href="images/sun.png" sizes="16x16" type="image/png">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noticia+Text&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Baskervville&display=swap" rel="stylesheet">
+  
+  <style>
+    
+	<!--
+	/*I learned and adapted the following calendar CSS (and corresponding HTML) 
+	from https://www.w3schools.com/howto/howto_css_calendar.asp */
+	-->
+	
+	.calendar {
+	  font-family: "Nunito Sans", sans-serif;
+	  margin-left: auto;
+	  margin-right: auto;
+	  width: 100%;
+	  border: 1px solid #4a4a4a;
+	  margin-top: 1em;
+	}
+	
+	.calendar a {
+	  text-decoration: none
+	}
+	
+	.month {
+	  font-size: 2em;
+	  font-weight: bold;
+	  text-align: center;
+	  background-color: #faf8e8;
+	  color:#666;
+	  padding-top:1em;
+	  padding-bottom:1em;
+	}
+  
+	.weekdays {
+	  margin: 0;
+	  padding: 5px 0;
+	  background-color:#c5e9fa;
+	  text-align: center
+	}
+
+	.weekdays li {
+	  display: inline-block;
+	  width: 12.5%;
+	  color: #666;
+	  font-size: 1.2em;
+	  text-align: center;
+	}
+
+	.days {
+	  padding: 5px 0;
+	  background: #faf2bb;
+	  text-align: center
+	}
+
+	.days li {
+	  list-style-type: none;
+	  display: inline-block;
+	  width: 12.5%;
+	  text-align: center;
+	  margin-top: .5em;
+	  margin-bottom: .5em;
+	  font-size:1.25em;
+	  color: #777;
+	}
+
+  </style>
+  
+  <script>
+  </script>
+
+</head>
+
+<body>
+<div id="wrapper">
+  <div id="calendartop">
+  </div>
+
+  <div class="pano">
+    <img src="images/steveston_pano.jpg" alt="steveston panorama">
+	<div class="pano-text">
+	  <div class="dropdown">
+	    <p><a href="sitemap.html"><img src="images/shipwheel.png" alt="shipwheel navicon"></a>Site Navigation</p>
+		<p>(click for sitemap)</p>
+		  <div class="dropdown-content">
+		  	<p class="text"><a href="main.html">Main Page</a></p>
+			<p class="text"><a href="store.html">Online Store</a></p>
+			  <ul class="text">
+				<li><a href="storeform.html">Purchase Form</a></li>
+				<li><a href="storecatalog.html">Online Catalog</a></li>
+			  </ul>
+			<p class="text"><a href="business.html">Local Businesses</a></p>
+			<p class="text"><a href="events.html">Local Events</a></p>
+			<p class="text"><a href="sightseeing.html">Sightseeing</a></p>
+			<p class="text"><a href="survey.html">Survey</a></p>
+			<p class="text"><a href="contact.html">About & Contact</a></p>
+			  <ul class="text">
+				<li><a href="sources.html">Sources</a></li>
+			  </ul>
+			<p class="text"><a href="privacy.html">Privacy Policy</a></p>
+			<p class="text"><a href="sitemap.html">Sitemap</a></p>
+		  </div>
+	  </div>
+	</div>
+  </div>
+
+  <hr class="hr1">
+  
+  <header>
+    <div>
+      <h1><a href="main.html">Heritage Hobbies & Fine Goods</a></h1>
+	  <h2>Steveston, British Columbia</h2>
+	</div>
+  </header>
+  
+  <hr class="hr1">
+  
+  <nav>
+    <div class="navbar">
+	  
+	  <a href="store.html"><img src="images/salmon.png" alt="salmon navicon">Our Store</a>
+	  
+	  <a href="business.html"><img src="images/shop.png" alt="shop navicon">Local Businesses</a>
+	  
+	  <a href="events.html"><img src="images/sun.png" alt="sun navicon">Local Events</a>
+	  <a href="sightseeing.html"><img src="images/binoculars.png" alt="binoculars navicon">Sightseeing</a>
+	  <a href="survey.html"><img src="images/survey.png" alt="survey navicon">Survey</a>
+	  <a href="contact.html"><img src="images/contact.png" alt="contact navicon">About & Contact</a>
+	</div>
+  </nav>
+
+  <main>
+  
+  <div class="mainpage">
+  <div class="container">
+    <p class="sub" style="margin-top:0em">Upcoming Events</p>
+	<p class="text"></p>
+  </div>
+  
+  <div class="container" style="float:none">
+
+  <div class="calendar">
+  <div class="month">
+    <p>November 2019</p>
+  </div>
+  
+    <ul class="weekdays">
+	  <li>Sun</li>
+	  <li>Mon</li>
+	  <li>Tue</li>
+	  <li>Wed</li>
+	  <li>Thu</li>
+	  <li>Fri</li>
+	  <li>Sat</li>
+	</ul>
+	
+	<ul class="days">
+	  <li> </li>
+ 	  <li> </li>
+	  <li> </li>
+	  <li> </li>
+	  <li> </li>
+	  <li>1</li>
+	  <li>2</li>
+	  <li>3</li>
+	  <li>4</li>
+	  <li>5</li>
+	  <li>6</li>
+	  <li>7</li>
+	  <li>8</li>
+	  <li>9</li>
+	  <li>10</li>
+	  <li>11</li>
+  	  <li>12</li>
+ 	  <li>13</li>
+	  <li>14</li>
+	  <li>15</li>
+	  <li>16</li>
+	  <li>17</li>
+	  <li>18</li>
+	  <li>19</li>
+	  <li>20</li>
+	  <li><a href="#event1" style="font-weight:bold">21</a></li>
+	  <li>22</li>
+	  <li>23</li>
+	  <li>24</li>
+	  <li>25</li>
+	  <li>26</li>
+	  <li>27</li>
+	  <li>28</li>
+	  <li>29</li>
+	  <li><a href="#event2" style="font-weight:bold">30</a></li>
+	</ul>
+	
+  </div>
+  </div>
+  </div>
+  
+  <hr style="width:90%;margin-left:auto;margin-right:auto">
+
+  
+  <div class="mainpage">
+  
+  <div class="container" style="margin-top: -1em; ;margin-bottom:3em">
+    <div id="event1">
+	  <p class="sub">November 21</p>
+	  <p class="text" style="font-weight:bold">Save-on-Foods Steveston Opening</p>
+	  <p><img src="images/soflogo.png" alt="save on foods logo" style="margin:1em"></p>
+	  <p class="text">Source: <a href="https://www.richmond-news.com/photos-videos/photos/photos-steveston-save-on-foods-opening-1.24016837" target="_blank">
+	  Richmond News</a></p>
+	  <p class="text">The new Save-on-Foods is located on Chatham St. First group of people to visit the new location received gift cards.</p>
+	  <blockquote>"Save-On-Foods' new opening in Steveston Village had their media launch on the evening of Thursday, Nov. 21. President of 
+	  Save-On-Foods and Overwaitea Food Group, Darrell Jones, was joined by store manager, Adam Rondquist, and employees and family members."
+	  </blockquote>
+	  <p class="text" style="margin-top: 1em;"><a href="#calendartop">Back to top</a></p>
+	</div>
+  </div>
+
+  <hr style="width:95%;margin-left:auto;margin-right:auto">
+  
+  <div class="container">
+    <div id="event2">
+	  <p class="sub">November 30</p>
+	  <p class="text" style="font-weight:bold">6th Annual Herring Sale</p>
+	  <p><img src="images/herring_buckets.jpg" alt="buckets of herring" style="margin:1em"></p>
+	  <p class="text">Source: <a href="https://www.visitrichmondbc.com/event/6th-annual-herring-sale%3A-fishermen-helping-kids-with-cancer/4557/" target="_blank">
+	  Visit Richmond BC</a></p>
+	  <p class="text">Fundraising event for helping kids with cancer.</p>
+	  <p class="text"><blockquote>"Herring by the boatfuls freshly caught in the Gulf of Georgia. 20lb bags will be sold for $10 each (cash only) from 8am to 4pm, 
+	  with all proceeds going to the BC Children’s Hospital, to help kids with cancer. Run entirely by volunteers from BC’s commercial fishing 
+	  industry, whose hard work and dedication have helped to raise $550,000 since its start in 2011. For a behind the scenes look at the extraordinary 
+	  efforts of all those involved, check out their videos from past years, and be sure to visit their website for lots of interesting information 
+	  about herring, including recipes."</blockquote>
+	  <p class="text" style="margin-top: 1em;"><a href="#calendartop">Back to top</a></p>
+	</div>
+  </div>
+  
+  </div>
+	
+  </main>
+
+
+
+  <footer>
+    <hr class="hr1">
+	<p style="font-size: 1.25em">Opening Hours<p>
+	<p>Mon-Fri: 9AM-5PM &#124; Sat: 8AM-6PM &#124; Sun: Closed</p>
+    <p>&copy; 2019 Daryl Wong &#124; <a href="privacy.html">Privacy Policy</a></p>
+	<hr class="hr1">
+  </footer>
+
+</div>
+</body>
+
+</html>

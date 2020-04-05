@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>Heritage Hobbies</title>
+  <meta charset="utf-8">
+  <meta name="author" content="Daryl Wong">
+  <meta name="description" content="Online Store">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css.css" media="all" type="text/css">
+  <link rel="icon" href="images/sun.png" sizes="16x16" type="image/png">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noticia+Text&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Baskervville&display=swap" rel="stylesheet">
+  
+  <style>
+
+    #onlineform {
+	  background-color: #d6d6d6;
+	  border: 2px solid black;
+	  padding: 2em;
+	  margin-top: 2em;
+	  min-width: 16em;
+	  max-width: 100%;
+	}
+	
+	fieldset {
+	  margin-bottom: 1em;
+	  padding: 1em;
+	  background-color: white;
+	}
+	
+	legend {
+	  font-weight: bold;
+	  background-color: white;
+	  border: 1px solid #4a4a4a;
+    }
+	
+	.info1 > label {
+	  display: block;
+	  text-align: left;
+	  width: 13em;
+	  margin: .1em;
+	  }
+	
+	.info1 > input {
+	  float: left;
+	  margin-right: 1em
+	}
+
+	.info2 > label {
+	  display: block;
+	  text-align: left;
+	  width: 10em;
+	  margin: .1em;
+	  }
+
+	.info2 > input {
+	  float: left;
+	  margin-right: 1em
+	}
+	
+	
+	.center {
+	  text-align: center
+	}
+
+  </style>
+  
+  <script>
+    function submitFunction() {
+	  window.alert("Thank you!")
+	}
+  
+  </script>
+
+</head>
+
+<body>
+<div id="wrapper">
+
+  <div class="pano">
+    <img src="images/steveston_pano.jpg" alt="steveston panorama">
+	<div class="pano-text">
+	  <div class="dropdown">
+	    <p><a href="sitemap.html"><img src="images/shipwheel.png" alt="shipwheel navicon"></a>Site Navigation</p>
+		<p>(click for sitemap)</p>
+		  <div class="dropdown-content">
+		  	<p class="text"><a href="main.html">Main Page</a></p>
+			<p class="text"><a href="store.html">Online Store</a></p>
+			  <ul class="text">
+				<li><a href="storeform.html">Purchase Form</a></li>
+				<li><a href="storecatalog.html">Online Catalog</a></li>
+			  </ul>
+			<p class="text"><a href="business.html">Local Businesses</a></p>
+			<p class="text"><a href="events.html">Local Events</a></p>
+			<p class="text"><a href="sightseeing.html">Sightseeing</a></p>
+			<p class="text"><a href="survey.html">Survey</a></p>
+			<p class="text"><a href="contact.html">About & Contact</a></p>
+			  <ul class="text">
+				<li><a href="sources.html">Sources</a></li>
+			  </ul>
+			<p class="text"><a href="privacy.html">Privacy Policy</a></p>
+			<p class="text"><a href="sitemap.html">Sitemap</a></p>
+		  </div>
+	  </div>
+	</div>
+  </div>
+
+  <hr class="hr1">
+  
+  <header>
+    <div>
+      <h1><a href="main.html">Heritage Hobbies & Fine Goods</a></h1>
+	  <h2>Steveston, British Columbia</h2>
+	</div>
+  </header>
+  
+  <hr class="hr1">
+  
+  <nav>
+    <div class="navbar">
+	  
+	  <a href="store.html"><img src="images/salmon.png" alt="salmon navicon">Our Store</a>
+	  
+	  <a href="business.html"><img src="images/shop.png" alt="shop navicon">Local Businesses</a>
+	  
+	  <a href="events.html"><img src="images/sun.png" alt="sun navicon">Local Events</a>
+	  <a href="sightseeing.html"><img src="images/binoculars.png" alt="binoculars navicon">Sightseeing</a>
+	  <a href="survey.html"><img src="images/survey.png" alt="survey navicon">Survey</a>
+	  <a href="contact.html"><img src="images/contact.png" alt="contact navicon">About & Contact</a>
+	</div>
+  </nav>
+
+  <main>
+  
+  <div class="mainpage">
+  <div class="container">
+  
+  	<p class="sub" style="margin-top: 0em">Survey Form</p>
+	<p class="text">If you would like to take a moment to fill out this optional, anonymous survey, we would be
+	very grateful for your opinion!</p>
+  
+  </div>
+  
+  <div class="container">
+    <div id="onlineform">
+	<form name="surveyform" id="surveyform" method="post" action="https://webdevbasics.net/scripts/demo.php" 
+	autocomplete="off">
+	
+  <fieldset>
+
+    <legend>Would you consider visiting Steveston?</legend>
+    
+	<div class="info1">
+	
+	<input type="radio" name="choice" id="yes" value="yes">
+	<label for="yes">Yes</label>
+	
+	<input type="radio" name="choice" id="no" value="no">
+	<label for="no">No</label>
+	
+	<input type="radio" name="choice" id="maybe" value="maybe">
+	<label for="maybe">Maybe/Have not decided</label>
+	
+	</div>
+	
+  </fieldset>
+  
+  <fieldset>
+    
+	<legend>What interests you the most about Steveston? (Check all that apply)</legend>
+	
+	<div class="info2">
+	
+	<input type="checkbox" name="favshops" id="shops" value="yes">
+	<label for="shops">Shops</label>
+	
+	<input type="checkbox" name="favfood" id="food" value="yes">
+	<label for="food">Restaurants</label>
+	
+	<input type="checkbox" name="favevents" id="events" value="yes">
+	<label for="events">Events</label>
+	
+	<input type="checkbox" name="favsights" id="sights" value="yes">
+	<label for="sights">Sightseeing</label>
+	
+	<input type="checkbox" name="favother" id="other" value="yes">
+	<label for="other">Other</label>
+	
+	</div>
+  </fieldset>
+  
+  <fieldset>
+    <legend>Please enter any additional comments. (Optional)</legend>
+	<div>
+	<textarea name="usercomments" id="comments" cols="25" rows="10"></textarea>
+	</div>
+  </fieldset>
+  
+  <div class="center">
+  
+  <button type="submit" value="Submit" id="submit"
+  onclick="submitFunction()">Submit Information</button>
+  <button type="reset" value="Reset" id="reset">Reset Form</button>
+
+  </div>
+  
+  </form>
+  </div>
+  </div>
+  </div>
+
+  
+  </main>
+  
+
+  <footer>
+    <hr class="hr1">
+	<p style="font-size: 1.25em">Opening Hours<p>
+	<p>Mon-Fri: 9AM-5PM &#124; Sat: 8AM-6PM &#124; Sun: Closed</p>
+    <p>&copy; 2019 Daryl Wong &#124; <a href="privacy.html">Privacy Policy</a></p>
+	<hr class="hr1">
+  </footer>
+
+</div>
+</body>
+
+</html>
