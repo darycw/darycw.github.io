@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>BCIT Campus Locator</title>
+    <style>
+        html, body {
+            height: 100%;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: lightgrey;
+        }
+        button {
+            min-width: 50vw;
+            margin-top: 5px;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            flex: 1 0 auto;
+            align-items: center;
+        }
+        .desc {
+            max-width: 60vw;
+            background-color: white;
+            padding: 1.2em;
+            border-radius: 25px;
+            margin-top: 5px;
+        }
+        .dropdown-menu {
+            min-width: 50vw;
+            max-width: 50vw;
+        }
+        .dropdown-menu a {
+            padding-left: 1em;
+        }
+        .dropdown-menu a:hover {
+            text-decoration: none;
+            color:darkblue;
+        }
+        .dropdown-menu li:hover {
+            background-color: rgb(188, 224, 194);
+        }
+        footer {
+            background-color:darkolivegreen;
+            min-width: 60vw;
+            text-align: center;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+            font-weight: bold;
+            color: white;
+            font-size: 1.2em;
+            margin-top: 5px;
+            padding-top: .5em;
+            padding-bottom: .5em;
+        }
+        header {
+            background-color:darkolivegreen;
+            min-width: 60vw;
+            text-align: center;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+            font-size: 2em;
+            font-weight: bold;
+            color: white;
+            padding-top: .5em;
+            padding-bottom: .5em;
+        }
+        .media iframe {
+            min-width: 60vw;
+            min-height: 40vw;
+            border-radius: 25px;
+            margin-top: 5px;
+        }
+        @media only screen and (max-width: 1000px) {
+            .media iframe {
+            min-width: 60vw;
+            min-height: 50vw;
+            }
+            .dropdown-menu {
+                font-size: 1.5em;
+           }
+           button {
+               font-size: 1.5em;
+           }
+        }
+        @media only screen and (max-width: 768px) {
+            .media iframe {
+            min-width: 80vw;
+            min-height: 70vw;
+            }
+            button {
+                min-width: 70vw;
+            }
+            footer {
+                min-width: 80vw;
+            }
+            header {
+                min-width: 80vw;
+            }
+            .desc {
+                max-width: 80vw;
+            }
+            .dropdown-menu {
+                min-width: 70vw;
+                font-size: 1.5em;
+           }
+        }
+        @media only screen and (max-width: 520px) {
+            .media iframe {
+            min-width: 90vw;
+            min-height: 100vw;
+            }
+            button {
+                min-width: 80vw;
+            }
+            .desc {
+                max-width: 90vw;
+            }
+            footer {
+                min-width: 90vw;
+            }
+            header {
+                min-width: 90vw;
+            }
+            .dropdown-menu {
+                min-width: 80vw;
+                font-size: 2em;
+           }
+        }
+    </style>
+</head>
+<body>
+    <header>BCIT Campuses</header>
+    <div class="content">
+    <nav class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select BCIT campus</button>
+        <ul class="dropdown-menu">
+            <li><a href="#" class="sel" id="sel1" onclick="clickFunction('sel1')">Burnaby</a></li>
+            <li><a href="#" class="sel" id="sel2" onclick="clickFunction('sel2')">Downtown</a></li>
+            <li><a href="#" class="sel" id="sel3" onclick="clickFunction('sel3')">Marine</a></li>
+            <li><a href="#" class="sel" id="sel4" onclick="clickFunction('sel4')">Aerospace Technology</a></li>
+            <li><a href="#" class="sel" id="sel5" onclick="clickFunction('sel5')">Annacis Island</a></li>
+        </ul>
+    </nav>
+    <div class="media">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83360.57896490858!2d-123.12761862783185!3d49.23814617930108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548676e1e49ab735%3A0x3acab7711e1f10d!2sBCIT%3A+British+Columbia+Institute+of+Technology!5e0!3m2!1sen!2sca!4v1511204599204" style="display: none" id="map1"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d20819.728847076112!2d-123.113074!3d49.28651300000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54867178c92a69b9%3A0x6b40938af55472d6!2s555+Seymour+St%2C+Vancouver%2C+BC+V6B%2C+Canada!5e0!3m2!1sen!2sus!4v1466635497209" style="display: none" id="map2"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2601.0832531560955!2d-123.086164!3d49.312707!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5b3cedf3596e8801!2sBCIT+Marine+Campus!5e0!3m2!1sen!2sca!4v1466635368201" style="display: none" id="map3"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2607.824345602906!2d-123.1468584844619!3d49.184919685613934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548674d9e8ea3f5b%3A0x92ae2003f9c612d!2s3800+Cessna+Dr%2C+Richmond%2C+BC+V7B+1C3!5e0!3m2!1sen!2sca!4v1466635048546" style="display: none" id="map4"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d20870.274411445913!2d-122.9583305!3d49.1667023!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485d8cd29ccd177%3A0x77f65730cefef4ac!2s1608+Cliveden+Ave!5e0!3m2!1sen!2sca!4v1396979939249" style="display: none" id="map5"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41294633.61607873!2d-130.1351512699838!3d50.823302128180195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b0d03d337cc6ad9%3A0x9968b72aa2438fa5!2sCanada!5e0!3m2!1sen!2sca!4v1587433371693!5m2!1sen!2sca" id="defaultMap"></iframe>
+    </div>
+    <div class="desc">
+        <div class="descCont" id="desc1" style="display: none;">
+            <h1>Burnaby Campus</h1>
+            <p>3700 Willingdon Ave</p>
+            <p>Burnaby, British Columbia V5G 3H2</p>
+            <p>The largest BCIT campus is home to hundreds of specialized learning spaces, including classrooms, shops, labs, simulators, broadcast studios, green roofs, energy grids, forests, and waterways.</p>
+            <p>Source: <a href="https://www.bcit.ca/about/visit/campuses-directions/burnaby/" target="blank">Burnaby Campus Website</a></p>
+        </div>
+        <div class="descCont" id="desc2" style="display: none;">
+            <h1>Downtown Campus</h1>
+            <p>555 Seymour St</p>
+            <p>Vancouver, British Columbia V7B 3H6</p>
+            <p>Located at the heart of Vancouver’s business and tech core, the Downtown Campus is home to the state-of-the-art Technology Education and Collaboration (TEC) Hub, an innovative IT learning space.</p>
+            <p>Source: <a href="https://www.bcit.ca/about/visit/campuses-directions/downtown/" target="blank">Downtown Campus Website</a></p>
+        </div>
+        <div class="descCont" id="desc3" style="display: none;">
+            <h1>Marine Campus</h1>
+            <p>265 W Esplanade</p>
+            <p>North Vancouver, BC V7M 1A5</p>
+            <p>The BCIT Marine Campus is the centre of training for the maritime industry in Western Canada. We offer programs in navigation, marine engineering, seamanship, and maritime safety and security. With bridge and engine room simulators and an indoor pool, students gain experience with realistic scenarios in a safe environment.</p>
+            <p>Source: <a href="https://www.bcit.ca/about/visit/campuses-directions/marine/" target="blank">Marine Campus Website</a></p>
+        </div>
+        <div class="descCont" id="desc4" style="display: none;">
+            <h1>Aerospace Technology Campus</h1>
+            <p>3800 Cessna Dr</p>
+            <p>Richmond, British Columbia V7B 0A1</p>
+            <p>Our state-of-the-art 285,000-square-foot Aerospace Technology Campus is home to BCIT’s aerospace programs. The campus is centred on a 40,000-square-foot hangar housing BCIT’s fleet of light piston, turboprop, corporate, and jet transport aircraft, including light and medium helicopters.</p>
+            <p>Source: <a href="https://www.bcit.ca/about/visit/campuses-directions/aerospace/" target="blank">Aerospace Technology Campus Website</a></p>
+        </div>
+        <div class="descCont" id="desc5" style="display: none;">
+            <h1>Annacis Island Campus</h1>
+            <p>1608 Cliveden Ave</p>
+            <p>Delta, BC V3M 6P1</p>
+            <p>BCIT’s Annacis Island Campus is located in Delta. The 142,000-square-foot facility is home to motive power programs offered by BCIT and Vancouver Community College. These programs train heavy-duty mechanics, transport trailer mechanics, diesel mechanics, commercial transportation mechanics, railway conductors and forklift operators.</p>
+            <p>Source: <a href="https://www.bcit.ca/about/visit/campuses-directions/annacis-island/" target="blank">Annacis Island Campus Website</a></p>
+        </div>
+        <div id="defaultDesc" style="display: block;">
+            <h1>Welcome</h1>
+            <p>With almost 50,000 enrolled students and over 125,000 alumni, the British Columbia Institute of Technology is one of Canada's leading polytechnic schools.</p>
+        </div>
+    </div>
+
+    </div>
+    <footer>Created by Daryl Wong<br>For BCIT COMP 2052</footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script>
+        let campusArray = document.getElementsByClassName("sel");
+        let mapArray = document.getElementsByTagName("iframe");
+        let descArray = document.getElementsByClassName("descCont");
+        
+        function clickFunction(param) {
+            document.getElementById("defaultMap").setAttribute("style", "display:none");
+            document.getElementById("defaultDesc").setAttribute("style", "display:none");
+            for (let i=0; i<campusArray.length; i++) {
+                if (campusArray[i].getAttribute("id") == param) {
+                    mapArray[i].setAttribute("style", "display: flex");
+                    descArray[i].setAttribute("style", "display: block");
+                }
+                else {
+                    mapArray[i].setAttribute("style", "display: none");
+                    descArray[i].setAttribute("style", "display: none");
+                }
+            }
+        }
+    </script>
+</body>
+</html>
