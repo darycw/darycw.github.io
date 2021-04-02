@@ -1,0 +1,94 @@
+body {
+	background-color: #dcdee0;
+}
+
+.agree {
+	color: #6eff72;
+}
+
+.disagree {
+	color: red;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+.myContract {
+	text-align: center;
+	margin: auto;
+	width: 75%;
+	max-width: 50rem;
+}
+
+.myContractText {
+	font-family: Corbel, sans-serif;
+	text-align: center;
+	margin-top: 5rem;
+}
+
+.myContractText h1 {
+	font-size: 4rem;
+	font-style: italic;
+	background-color: #d4e4ff;
+	padding: 1rem;
+	border-radius: 10px;
+	border-left: 30px solid black;
+	box-shadow: 2px 0 20px 3px grey, -2px 0 20px 3px grey;
+	background-image: linear-gradient(45deg, #4d7fd1, #c2d9ff);
+}
+
+.myContractText .textBody {
+	padding: 3rem;
+	background-color: #506991;
+	color: white;
+	border-left: 30px solid white;
+	text-align: left;
+	border-radius: 10px;
+	box-shadow: 2px 0 20px 3px grey, -2px 0 20px 3px grey;
+	font-size: 1.5rem;
+	line-height: 1.5;
+	background-image: linear-gradient(45deg, #2a364a, #577ab3);
+}
+
+.myContractText .textBody p:nth-of-type(1) {
+	margin-bottom: 5rem;
+	font-weight: bold;
+}
+
+.myContractText .textBody p:nth-of-type(2) {
+	font-style: italic;
+}
+
+
+button {
+	margin: 1rem;
+	font-size: 1.5rem;
+	border-radius: 25px;
+	border: 0;
+	background-color: white;
+	padding: 1rem;
+	box-shadow: 2px 0 20px 3px grey, -2px 0 20px 3px grey;
+	color: white;
+	font-weight: bold;
+}
+
+button:nth-of-type(1) {
+	background-image: linear-gradient(45deg, #53a33c, #66e342);
+}
+
+button:nth-of-type(2) {
+	background-image: linear-gradient(45deg, #9e4444, #e64e4e);
+}
+
+@media only screen and (max-width: 600px) {
+	.myContractText h1 {
+		font-size: 2rem;
+	}
+	.myContractText .textBody {
+		font-size: 1rem;
+	}
+	button {
+		font-size: 1rem;
+	}
+}
