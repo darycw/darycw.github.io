@@ -1,0 +1,80 @@
+html {
+    background: url("background.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-animation: myfirst 1s;
+    animation: myfirst 1s ;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%
+}
+
+a:link {
+    text-decoration: none;
+  }
+  
+  a:visited {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  a:active {
+    text-decoration: underline;
+  }
+
+#wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+#wrapper-bottom {
+    position: absolute;
+    bottom: 0
+}
+
+#wrapper-center {
+    display: flex;
+    margin-left: 5em;
+    margin-right: 5em;
+    align-items: center;
+    justify-content: center;
+}
+
+#card-text {
+    font-family: 'Parisienne', cursive;
+    font-weight: bold;
+    font-size: 10vh;
+    background: -webkit-linear-gradient(#eee, rgb(102, 101, 101));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: .15em;
+  }
+
+#card-text2 {
+    font-family: 'Parisienne', cursive;
+    font-weight: bold;
+    font-size: 5vh;
+    background: -webkit-linear-gradient(#eee, rgb(102, 101, 101));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: .15em;
+}
+
+  @-webkit-keyframes myfirst {
+    from {opacity: 0.5;}
+    to {opacity: 1;}
+  }
+
+  @keyframes myfirst {
+    from {opacity: 0.5;}
+    to {opacity: 1;}
+  }
